@@ -76,11 +76,20 @@ docker run \
 
 
 # concatenate the vcf results
+# S185
 bcftools view -t ^chrX:2781480-155701382,chrY:2781480-56887901 --targets-overlap 2 S185.output.vcf.gz -Oz -o S185_whole_genome_no_nonPAR_XY.vcf.gz
 bcftools index output/S185_whole_genome_no_nonPAR_XY.vcf.gz
 bcftools concat -a output/S185_whole_genome_no_nonPAR_XY.vcf.gz nonPAR_X/output/S185_nonPAR_X.output.vcf.gz nonPAR_Y/output/S185_nonPAR_Y.output.vcf.gz -Oz -o S185_concatenated.vcf.gz
-
-
+# S186
+bcftools view -t ^chrX:2781480-155701382 --targets-overlap 2 S186.output.vcf.gz -Oz -o S186_whole_genome_no_nonPAR_X.vcf.gz
+bcftools index S186_whole_genome_no_nonPAR_X.vcf.gz
+bcftools concat -a S186_whole_genome_no_nonPAR_X.vcf.gz S186_nonPAR_X.output.vcf.gz -Oz -o S186_concatenated.vcf.gz
+bcftools index S186_concatenated.vcf.gz
+# S187
+bcftools view -t ^chrY:2781480-56887901 --targets-overlap 2 S187.output.vcf.gz -Oz -o S187_whole_genome_no_nonPAR_Y.vcf.gz
+bcftools index S187_whole_genome_no_nonPAR_Y.vcf.gz
+bcftools concat -a S187_whole_genome_no_nonPAR_Y.vcf.gz S187_nonPAR_Y.output.vcf.gz -Oz -o S187_concatenated.vcf.gz
+bcftools index S187_concatenated.vcf.gz
 
 #run the AIM
 docker run \
