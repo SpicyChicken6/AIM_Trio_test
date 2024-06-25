@@ -93,21 +93,3 @@ docker run \
 
 
 
-#check the genotype for the trio
-bcftools   query -R top10_default.txt -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%QUAL\t%FILTER\t%INFO\t[%GT:%GQ:%DP:%AD:%VAF:%PL]\n' HPO_vcf/S185_concatenated.vcf.gz > S185_default.txt
-bcftools   query -R top10_default.txt -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%QUAL\t%FILTER\t%INFO\t[%GT:%GQ:%DP:%AD:%VAF:%PL]\n' output/S186.g.vcf.gz > S186_default.txt
-bcftools   query -R top10_default.txt -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%QUAL\t%FILTER\t%INFO\t[%GT:%GQ:%DP:%AD:%VAF:%PL]\n' output/S187.g.vcf.gz > S187_default.txt
-
-bcftools   query -R top10_recessive.txt -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%QUAL\t%FILTER\t%INFO\t[%GT:%GQ:%DP:%AD:%VAF:%PL]\n' HPO_vcf/S185_concatenated.vcf.gz > S185_recessive.txt
-bcftools   query -R top10_recessive.txt -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%QUAL\t%FILTER\t%INFO\t[%GT:%GQ:%DP:%AD:%VAF:%PL]\n' output/S186.g.vcf.gz > S186_recessive.txt
-bcftools   query -R top10_recessive.txt -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%QUAL\t%FILTER\t%INFO\t[%GT:%GQ:%DP:%AD:%VAF:%PL]\n' output/S187.g.vcf.gz > S187_recessive.txt
-
-bcftools   query -R top10_ND.txt -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%QUAL\t%FILTER\t%INFO\t[%GT:%GQ:%DP:%AD:%VAF:%PL]\n' HPO_vcf/S185_concatenated.vcf.gz > S185_ND.txt
-bcftools   query -R top10_ND.txt -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%QUAL\t%FILTER\t%INFO\t[%GT:%GQ:%DP:%AD:%VAF:%PL]\n' output/S186.g.vcf.gz > S186_ND.txt
-bcftools   query -R top10_ND.txt -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%QUAL\t%FILTER\t%INFO\t[%GT:%GQ:%DP:%AD:%VAF:%PL]\n' output/S187.g.vcf.gz > S187_ND.txt
-
-bcftools   query -R top10_NDrecessive.txt -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%QUAL\t%FILTER\t%INFO\t[%GT:%GQ:%DP:%AD:%VAF:%PL]\n' HPO_vcf/S185_concatenated.vcf.gz > S185_NDrecessive.txt
-bcftools   query -R top10_NDrecessive.txt -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%QUAL\t%FILTER\t%INFO\t[%GT:%GQ:%DP:%AD:%VAF:%PL]\n' output/S186.g.vcf.gz > S186_NDrecessive.txt
-bcftools   query -R top10_NDrecessive.txt -f '%CHROM\t%POS\t%ID\t%REF\t%ALT\t%QUAL\t%FILTER\t%INFO\t[%GT:%GQ:%DP:%AD:%VAF:%PL]\n' output/S187.g.vcf.gz > S187_NDrecessive.txt
-
-  
